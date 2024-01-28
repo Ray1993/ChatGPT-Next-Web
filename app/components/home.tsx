@@ -26,6 +26,8 @@ import {
 import { SideBar } from "./sidebar";
 import { useAppConfig } from "../store/config";
 import { AuthPage } from "./auth";
+import { LoginPage } from "./login";
+import { RegisterPage } from "./register";
 import { getClientConfig } from "../config/client";
 import { ClientApi } from "../client/api";
 import { useAccessStore } from "../store";
@@ -125,8 +127,13 @@ const loadAsyncGoogleFont = () => {
 function Screen() {
   const config = useAppConfig();
   const location = useLocation();
+  const loaginState = localStorage.getItem("loaginState");
   const isHome = location.pathname === Path.Home;
   const isAuth = location.pathname === Path.Auth;
+  const isLogin = location.pathname === Path.Login;
+  const isLogined = loaginState === "admin";
+  const isRegister = location.pathname === Path.Register;
+
   const isMobileScreen = useMobileScreen();
   const shouldTightBorder =
     getClientConfig()?.isApp || (config.tightBorder && !isMobileScreen);
@@ -147,6 +154,14 @@ function Screen() {
       {isAuth ? (
         <>
           <AuthPage />
+        </>
+      ) : isLogin || !isLogined ? (
+        <>
+          <LoginPage />
+        </>
+      ) : isRegister ? (
+        <>
+          <RegisterPage />
         </>
       ) : (
         <>
