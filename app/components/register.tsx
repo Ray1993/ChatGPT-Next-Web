@@ -65,7 +65,7 @@ export function RegisterPage() {
                 <IconButton text="注册" type="primary" onClick={goChat} />
                 <div className={styles['auth-rule']}>
                     <input type="checkbox" id="rule" value="rule" />
-                    <label for="rule">我已阅读并同意 《用户协议》 、 《隐私政策》、《服务协议》</label>
+                    {/* <label for="rule">我已阅读并同意 《用户协议》 、 《隐私政策》、《服务协议》</label> */}
                 </div>
             </div>
         </div>
