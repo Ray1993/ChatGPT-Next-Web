@@ -13,7 +13,8 @@
     "app:build": "yarn tauri build",
     "prompts": "node ./scripts/fetch-prompts.mjs",
     "prepare": "husky install",
-    "proxy-dev": "sh ./scripts/init-proxy.sh && proxychains -f ./scripts/proxychains.conf yarn dev"
+    "proxy-dev": "sh ./scripts/init-proxy.sh && proxychains -f ./scripts/proxychains.conf yarn dev",
+    "prettier": "prettier -c --write \"app/**/*\""
   },
   "dependencies": {
     "@fortaine/fetch-event-source": "^3.0.6",
@@ -21,6 +22,7 @@
     "@svgr/webpack": "^6.5.1",
     "@vercel/analytics": "^0.1.11",
     "@vercel/speed-insights": "^1.0.2",
+    "antd": "^5.14.0",
     "emoji-picker-react": "^4.5.15",
     "fuse.js": "^7.0.0",
     "html-to-image": "^1.11.11",

@@ -1,0 +1,26 @@
+{
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "printWidth": 120,
+    "vetur.validation.template": false,
+    "vetur.format.options.tabSize": 2,
+    "endOfLine": "auto",
+    "tabWidth": 4,
+  
+    "overrides": [
+      {
+        "files": ".prettierrc",
+        "options": {
+          "parser": "json"
+        }
+      },
+      {
+        "files": ".stylelintrc",
+        "options": {
+          "parser": "json"
+        }
+      }
+    ]
+  }
