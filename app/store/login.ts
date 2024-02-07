@@ -20,7 +20,7 @@ export const useLoginStore = createPersistStore(
         },
         async login(loginName: String, loginPwd: any) {
             const res = await fetch(
-                `http://127.0.0.1:8080/console/admin/login?loginName=${loginName}&loginPwd=${loginPwd}`,
+                `http://47.245.93.212:8080/console/admin/login?loginName=${loginName}&loginPwd=${loginPwd}`,
                 {
                     method: 'GET',
                     mode: 'cors',
@@ -46,7 +46,7 @@ export const useLoginStore = createPersistStore(
         async logout() {
             sessionStorage.removeItem('loginState');
             return true;
-            // const res = await fetch('http://127.0.0.1:8080/console/admin/logout', {
+            // const res = await fetch('http://47.245.93.212:8080/console/admin/logout', {
             //     method: 'GET',
             //     mode: 'cors',
             //     body: null,
@@ -70,7 +70,7 @@ export const useLoginStore = createPersistStore(
                     permission: loginState.permission,
                 }));
             } else {
-                const res = await fetch('http://127.0.0.1:8080/console/admin/check', {
+                const res = await fetch('http://47.245.93.212:8080/console/admin/check', {
                     method: 'GET',
                     mode: 'cors',
                 });

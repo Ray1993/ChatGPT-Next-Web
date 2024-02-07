@@ -112,15 +112,6 @@ const loadAsyncGoogleFont = () => {
 };
 
 function Screen() {
-    fetch('http://47.245.93.212:8080/console/admin/login?loginName=walter&loginPwd=123456', {
-        method: 'get',
-        body: null,
-    })
-        .then((res) => res.json())
-        .then((res: DangerConfig) => {
-            console.log('[Config] got config from server', res);
-        });
-
     const config = useAppConfig();
     const location = useLocation();
     const isHome = location.pathname === Path.Home;

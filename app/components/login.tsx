@@ -46,7 +46,7 @@ export function LoginPage() {
             <div className={`no-dark ${styles['auth-logo']}`}>
                 <BotIcon />
             </div>
-            <div className={styles['auth-tips']}>请输入手机号码</div>
+            <div className={styles['auth-tips']}>请输入用户名</div>
 
             <input
                 className={styles['auth-input']}
